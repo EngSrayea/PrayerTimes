@@ -125,7 +125,16 @@ struct ContentView: View {
                         Spacer()
                     }
                     
-                }.background(Color(.white).opacity(0.2)).edgesIgnoringSafeArea(.bottom)//.onTapGesture {
+                    Spacer()
+                    
+                }.background(Color(.white).opacity(0.2)).edgesIgnoringSafeArea(.bottom)
+                    .onTapGesture {
+                        self.BGcolor = Color(
+                            red: .random(in: 0...1),
+                            green: .random(in: 0...1),
+                            blue: .random(in: 0...1)
+                        )
+                }
                     
                 }
         }
